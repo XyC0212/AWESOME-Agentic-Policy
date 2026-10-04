@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VLS: Steering Pretrained Robot Policies via Vision-Language Models — Awesome Agentic Policy</title>
+<meta name="citation_title" content="VLS: Steering Pretrained Robot Policies via Vision-Language Models">
+<meta name="citation_author" content="Liu, Shuo">
+<meta name="citation_author" content="Singh, Ishneet Sukhvinder">
+<meta name="citation_author" content="Xu, Yiqing">
+<meta name="citation_author" content="Duan, Jiafei">
+<meta name="citation_author" content="Krishna, Ranjay">
+<meta name="citation_publication_date" content="2026">
+<meta name="citation_journal_title" content="CoRL">
+<meta name="citation_arxiv_id" content="2602.03973">
+<meta name="citation_pdf_url" content="https://arxiv.org/pdf/2602.03973.pdf">
+<meta name="citation_public_url" content="https://arxiv.org/abs/2602.03973">
+<meta name="citation_abstract" content="Why do pretrained diffusion or flow-matching policies fail when the same task is performed near an obstacle, on a shifted support surface, or amid mild clutter? Such failures rarely reflect missing motor skills; instead, they expose a limitation of imitation learning under train-test shifts, where action generation is tightly coupled to training-specific spatial configurations and task specifications. Retraining or fine-tuning to address these failures is costly and conceptually misaligned, as the required behaviors already exist but cannot be selectively adapted at test time. We propose Vision-Language Steering (VLS), a training-free framework for inference-time adaptation of frozen generative robot policies. VLS treats adaptation as an inference-time control problem, steering the sampling process of a pretrained diffusion or flow-matching policy in response to out-of-distribution observation-language inputs without modifying policy parameters. By leveraging vision-language models to synthesize trajectory-differentiable reward functions, VLS guides denoising toward action trajectories that satisfy test-time spatial and task requirements. Across simulation and real-world evaluations, VLS consistently outperforms prior steering methods, achieving a 31% improvement on CALVIN and a 13% gain on LIBERO-PRO. Real-world deployment on a Franka robot further demonstrates robust inference-time adaptation under test-time spatial and semantic shifts. Project page: https://vision-language-steering.github.io/webpage/">
+<style>
+  body { font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+         margin: 0 auto; max-width: 760px; padding: 1.5rem; line-height: 1.5; }
+  a { color: #2563eb; }
+  h1 { font-size: 1.35rem; margin: .3rem 0; }
+  h2 { font-size: 1rem; color: #777; margin: 1.5rem 0 .4rem; }
+  .authors { color: #444; }
+  .venue { color: #777; margin: .2rem 0 1rem; }
+  .save { background: #cc29361a; border: 1px solid #cc293655; border-radius: 8px;
+           padding: .6rem .8rem; }
+  .save b { color: #cc2936; }
+  .links a { margin-right: .8rem; }
+  .back { color: #777; font-size: .9rem; }
+</style>
+</head>
+<body>
+  <p><a class="back" href="../index.html">← All papers</a></p>
+  <h1>VLS: Steering Pretrained Robot Policies via Vision-Language Models</h1>
+  <p class="authors">Shuo Liu, Ishneet Sukhvinder Singh, Yiqing Xu, Jiafei Duan, Ranjay Krishna</p>
+  <p class="venue">CoRL · 2026</p>
+  <p class="save">📚 Click your <b>Zotero Connector</b> toolbar button now to save this paper
+     <b>with its PDF</b> attached.</p>
+  <p class="links"><a href="https://arxiv.org/abs/2602.03973" target="_blank" rel="noopener">Paper</a> · <a href="https://vision-language-steering.github.io/webpage/" target="_blank" rel="noopener">Project</a> · <a href="https://github.com/Vision-Language-Steering/code" target="_blank" rel="noopener">Code</a> · <a href="https://arxiv.org/pdf/2602.03973.pdf" target="_blank" rel="noopener">PDF</a></p>
+  <h2>Abstract</h2>
+  <p>Why do pretrained diffusion or flow-matching policies fail when the same task is performed near an obstacle, on a shifted support surface, or amid mild clutter? Such failures rarely reflect missing motor skills; instead, they expose a limitation of imitation learning under train-test shifts, where action generation is tightly coupled to training-specific spatial configurations and task specifications. Retraining or fine-tuning to address these failures is costly and conceptually misaligned, as the required behaviors already exist but cannot be selectively adapted at test time. We propose Vision-Language Steering (VLS), a training-free framework for inference-time adaptation of frozen generative robot policies. VLS treats adaptation as an inference-time control problem, steering the sampling process of a pretrained diffusion or flow-matching policy in response to out-of-distribution observation-language inputs without modifying policy parameters. By leveraging vision-language models to synthesize trajectory-differentiable reward functions, VLS guides denoising toward action trajectories that satisfy test-time spatial and task requirements. Across simulation and real-world evaluations, VLS consistently outperforms prior steering methods, achieving a 31% improvement on CALVIN and a 13% gain on LIBERO-PRO. Real-world deployment on a Franka robot further demonstrates robust inference-time adaptation under test-time spatial and semantic shifts. Project page: https://vision-language-steering.github.io/webpage/</p>
+</body>
+</html>
