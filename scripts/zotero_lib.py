@@ -130,7 +130,7 @@ def download_pdf(arxiv_id, dest_dir=None):
     dest_dir = Path(dest_dir or tempfile.mkdtemp(prefix="agentic-policy-zotero-"))
     dest_dir.mkdir(parents=True, exist_ok=True)
     path = dest_dir / f"{arxiv_id}.pdf"
-    url = f"https://arxiv.org/pdf/{arxiv_id}.pdf"
+    url = f"https://arxiv.org/pdf/{arxiv_id}"  # arXiv answers 406 to the ".pdf" form
     req = urllib.request.Request(url, headers={"User-Agent": UA})
     with urllib.request.urlopen(req, timeout=60) as r, open(path, "wb") as f:
         shutil.copyfileobj(r, f)
@@ -198,9 +198,14 @@ def attach_pdf(zot, parent_key, pdf, attempts=3):
     short-circuits on the API's "file already exists" path (pyzotero reports that
     as `unchanged`, not `failure`). Attempts that fail leave no orphan child item.
     """
+    pdf = Path(pdf)
     for i in range(attempts):
         try:
-            att = zot.attachment_simple([str(pdf)], parent_key)
+            # attachment_simple() sends the full path as `filename`, which the API
+            # rejects; send the bare name and let basedir locate the file.
+            tmpl = zot.item_template("attachment", "imported_file")
+            tmpl.update(title=pdf.name, filename=pdf.name)
+            att = zot.upload_attachments([tmpl], parent_key, basedir=pdf.parent)
         except Exception as e:
             print(f"      PDF upload attempt {i + 1}/{attempts} raised {type(e).__name__}: {e}",
                   file=sys.stderr)
