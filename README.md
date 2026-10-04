@@ -23,6 +23,14 @@ Each paper is tagged across the following themes:
 
 | # | Title | Venue | Year | Affiliation | Plan | Code | Rew | Sim | Tool | Mem | Refl | Fnd | Links |
 |---|-------|-------|------|-------------|:----:|:----:|:---:|:---:|:----:|:---:|:----:|:---:|-------|
+| 1 | Generalizing Manipulation Skills with a Local Coding Agent | arXiv | 2026 | Ghent University – imec |  | ✅ |  |  |  |  | ✅ |  | [Paper](https://arxiv.org/abs/2609.26499) · [Project](https://rtalwar2.github.io/agentic-coding-for-robot-manipulation/) |
+| 2 | Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation | arXiv | 2026 | USC | ✅ | ✅ |  |  | ✅ |  | ✅ |  | [Paper](https://arxiv.org/abs/2609.20822) |
+| 3 | Agent as Policy for Robotic Manipulation | arXiv | 2026 | University of Notre Dame | ✅ | ✅ |  |  |  | ✅ | ✅ |  | [Paper](https://arxiv.org/abs/2609.12541) · [Project](https://agent-as-policy-2026.github.io/) · [Code](https://github.com/agent-as-policy-2026/agent-as-policy) |
+| 4 | Revisiting the "Push-T" Robot Manipulation Task with Agentic Robotics | arXiv | 2026 | UC Berkeley |  | ✅ |  | ✅ |  |  | ✅ |  | [Paper](https://arxiv.org/abs/2608.18227) |
+| 5 | ENPIRE: Agentic Robot Policy Self-Improvement in the Real World | CoRL | 2026 | NVIDIA |  |  | ✅ |  | ✅ |  | ✅ |  | [Paper](https://arxiv.org/abs/2606.19980) · [Project](https://research.nvidia.com/labs/gear/enpire) · [Code](https://github.com/NVlabs/ENPIRE) |
+| 6 | Playful Agentic Robot Learning | arXiv | 2026 | UC Berkeley | ✅ | ✅ |  |  | ✅ | ✅ | ✅ |  | [Paper](https://arxiv.org/abs/2606.19419) · [Project](https://playful-rats.github.io/) · [Code](https://github.com/Playful-RATs/rats) |
+| 7 | RHO: Your Coding Agent is Secretly a Roboticist | arXiv | 2026 | UC Berkeley |  | ✅ |  |  | ✅ |  | ✅ |  | [Paper](https://arxiv.org/abs/2606.16458) · [Project](https://rho-robotics.github.io) · [Code](https://github.com/KE7/HELIX) |
+| 8 | RoboClaw: An Agentic Framework for Scalable Long-Horizon Robotic Tasks | arXiv | 2026 | AgiBot | ✅ |  |  | ✅ | ✅ | ✅ | ✅ |  | [Paper](https://arxiv.org/abs/2603.11558) · [Project](https://roboclaw-agibot.github.io/) · [Code](https://github.com/RoboClaw-Robotics/RoboClaw) |
 
 <!-- markdownlint-enable MD060 -->
 

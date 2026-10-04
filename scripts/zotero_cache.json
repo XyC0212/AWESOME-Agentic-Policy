@@ -1,0 +1,144 @@
+{
+  "2609.26499": {
+    "title": "Generalizing Manipulation Skills with a Local Coding Agent",
+    "authors": [
+      "Raman Talwar",
+      "Elias Nijs",
+      "Andreas Verleysen",
+      "Francis wyffels"
+    ],
+    "abstract": "Today, progress in open-weight language models enables systems capable of writing, executing and debugging code while still running on a single workstation. Most language-driven robots give the model a fixed action interface or a trained policy. Generalizing to a new task therefore means more engineering effort or more data collection, both time-consuming. We investigate whether a local open-weight vision-language model can control a robot and one-shot generalize to new variations of a task without new human programming or training. We let a local open-weight VLM, Qwen3.8-27B, drive a UR3e robotic arm from a coding-agent harness. It writes and runs its own code above a service that implements kinematics, safety limits and classic computer vision techniques. We investigate if this system is capable of generalizing to unseen tasks. Specifically, we test it on nine tasks built from children's toys designed to probe generalization capability across various object characteristics: color, size, shape, and task variation of those. With five trials for each task, we observe generalization in 30 out of 45 trials with durations ranging from 3.4 to 67.5 minutes depending on task complexity. We further test if there is a speedup when an agent is asked to redo the task after successful completion. This resulted in a 50% reduction in duration, indicating that there is self-improvement over time. Finally, we expose the limitations of a local coding agent. We believe that solving those limitations combined with further investigation of self-improvement over time points at a direct path toward real-world deployment of a local coding agent.",
+    "year": "2026",
+    "doi": ""
+  },
+  "2609.20822": {
+    "title": "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
+    "authors": [
+      "Bingxin Xu",
+      "Yuzhang Shang",
+      "Zhen Dong",
+      "Emilio Ferrara"
+    ],
+    "abstract": "Coding agents have emerged as a promising paradigm for robot manipulation: a language model writes the robot controller as a program, and agents built in this way now operate robots without robot-specific training.Whether this paradigm is also safe, however, has not been asked. We evaluate coding agent under a safety constraint, where each task pairs a manipulation goal with an obstacle the robot must not touch. The agent pursues the goal but collides with the obstacle in most cases, treating task completion as its sole objective while neglecting safety. The agent reasons about the obstacle in its traces, and the prompt already forbids touching it, so neither perception nor instruction is at fault; the fault lies in the planning, where the stated constraint never becomes a priority. By decomposing manipulation into a route phase and a contact-rich moment, we locate the source of the failure. Along the route, the model cannot prioritize the safety constraint, having no notion of a clearing route and none of replanning once a chosen route becomes infeasible. At the contact, it is unaware that contact execution is bounded by the same constraint. To close this gap, we present SafeHarness, which equips the model with two obstacle-aware harnesses that enable it to prioritize the safety constraint. Obstacle-aware route planning grounds the objects as bounding boxes and draws candidate routes over them as sequences of waypoints. The agent then plans a route in advance, verifies it, replans when necessary, and only then executes it. Obstacle-aware contact execution instead selects the contact position so that the contact itself avoids the obstacle. SafeHarness attains 71.9% task success and 87.5% collision avoidance, surpassing the previous SOTA by 6.5% and 27.0%, respectively. These results are $2.3\\times$ and $1.5\\times$ those of the same agent without harnesses.",
+    "year": "2026",
+    "doi": ""
+  },
+  "2609.12541": {
+    "title": "Agent as Policy for Robotic Manipulation",
+    "authors": [
+      "Mengzhao Jia",
+      "Yang Lin",
+      "Xixin Zhang",
+      "Zhihan Zhang",
+      "Xiaobai Liu",
+      "Meng Jiang"
+    ],
+    "abstract": "We demonstrate that a general-purpose agent can directly drive a physical robot throughout task execution without any task-specific or environment-specific training. We introduce Agent as Policy (AGP), which places task planning and execution under the agent's control. Given a task and a robot interface, the agent interprets visual evidence, writes executable programs, issues motion commands, and revises its actions in response to physical outcomes. This brings the agent's reasoning and programming capabilities into continuous interaction with the physical world. We study AGP across multiple real-world manipulation tasks spanning precision manipulation, dynamic motions, and deformable objects. These include assembly from human videos, block construction from goal images, dice flipping, targeted throwing, and bimanual towel folding. AGP achieves success rates of at least 80% in seven of eight task configurations and significantly outperforms previous agentic robot systems. We further study efficiency through task experience accumulation and find that reusing saved procedures and programs shortens execution time across repeated trials. These findings support a path for general-purpose agents to act as robot policies, extending their autonomy to physical manipulation through runtime reasoning, programming, and interaction.",
+    "year": "2026",
+    "doi": ""
+  },
+  "2608.18227": {
+    "title": "Revisiting the \"Push-T\" Robot Manipulation Task with Agentic Robotics",
+    "authors": [
+      "Shuangyu Xie",
+      "Kaiyuan Chen",
+      "Ken Goldberg"
+    ],
+    "abstract": "Push-T is an iconic benchmark for learning manipulation policies from human demonstrations. The robot must use a single point of contact to push a T-shaped block into a target pose. In this short paper, we revisit the Push-T task in the context of emerging advances in Agentic Robotics where an LLM coding agent -- Claude Code with Fable 5 -- is prompted to create an algorithmic solution that does not require any demonstration data. We study how effective the agentic coding loop can solve the Push-T task, and compare the resulting code as policy with the visuomotor imitation learning policy. Results suggest that the agent found the 2D gym simulation online, and used sim experiments to learn push mechanics, iteratively optimizing to achieve 100% success rate using 46% fewer steps than the best diffusion policy trained with 200 human demonstrations. The coding agent also solve extensions from T to the full alphabet (Push-A to Push-Z) using a self generated curriculum and generated simulation code for the Franka and UR5 robot arms in 3D cross-embodiment simulations with visual feedback. Videos, policies and details will be posted online.",
+    "year": "2026",
+    "doi": ""
+  },
+  "2606.19980": {
+    "title": "ENPIRE: Agentic Robot Policy Self-Improvement in the Real World",
+    "authors": [
+      "Wenli Xiao",
+      "Jia Xie",
+      "Tonghe Zhang",
+      "Haotian Lin",
+      "Letian \"Max\" Fu",
+      "Haoru Xue",
+      "Jalen Lu",
+      "Yi Yang",
+      "Cunxi Dai",
+      "Zi Wang",
+      "Jimmy Wu",
+      "Guanzhi Wang",
+      "S. Shankar Sastry",
+      "Ken Goldberg",
+      "Linxi \"Jim\" Fan",
+      "Yuke Zhu",
+      "Guanya Shi"
+    ],
+    "abstract": "Achieving dexterous robotic manipulation in the real world heavily relies on human supervision and algorithm engineering, which becomes a central bottleneck in the pursuit of general physical intelligence. Although emerging coding agents can generate code to automate algorithm search, their successes remain largely confined in digital environments. We conjecture that the missing abstraction to automate robotics research is a repeatable feedback loop for real-world policy improvement: reset the scene, execute a policy, verify the outcome, and refine the next iteration. To bridge this gap, we introduce ENPIRE, a harness framework for coding agents that instantiates this physical feedback routine with four core modules: an Environment module (EN) for automatic reset and verification, a Policy Improvement module (PI) that launches policy refinement, a Rollout module (R) to evaluate policies with one or multiple physical robots operating in parallel, and an Evolution module (E) in which coding agents analyze logs, consult literature, improve training infrastructure and algorithm code to address failure modes. This closed-loop system transforms real-world manipulation learning into a controllable optimization procedure, minimizing human effort while allowing fair ablations across training recipe and agent variants. Powered by ENPIRE, frontier coding agents can autonomously train a policy to achieve a 99% success rate on challenging, dexterous manipulation tasks, such as organizing a pin box, fastening a zip tie, and tool use, a process that further accelerates when we dispatch an agent team on a robot fleet. Our results suggest a practical and scalable path toward deploying coding agents to autonomously advancing robotics in the physical world.",
+    "year": "2026",
+    "doi": ""
+  },
+  "2606.19419": {
+    "title": "Playful Agentic Robot Learning",
+    "authors": [
+      "Junyi Zhang",
+      "Jiaxin Ge",
+      "Hanjun Yoo",
+      "Letian Fu",
+      "Zihan Yang",
+      "Yaowei Liu",
+      "Raj Saravanan",
+      "Shaofeng Yin",
+      "Justin Yu",
+      "Dantong Niu",
+      "Zirui Wang",
+      "Roei Herzig",
+      "Ken Goldberg",
+      "Yutong Bai",
+      "David M. Chan",
+      "Ion Stoica",
+      "Angjoo Kanazawa",
+      "Jiahui Lei",
+      "Haiwen Feng",
+      "Trevor Darrell"
+    ],
+    "abstract": "Current agentic robot systems can write executable Code-as-Policy programs, observe feedback, and revise behavior across multiple attempts, but they remain largely task-driven: reusable skills are acquired only after explicit instructions. We study Playful Agentic Robot Learning, where an embodied coding agent uses self-directed play as a continual skill-learning stage before downstream tasks arrive. We introduce RATs, Robotics Agent Teams designed for play-time skill acquisition. During play, RATs proposes novel yet learnable exploratory tasks, plans and executes robot-code policies, verifies intermediate progress, diagnoses failures, retries with dense, step-level feedback, and distills successful executions into a persistent code skill library. At test time, the agent reuses relevant skills from this frozen library to help solve new tasks. Experiments in LIBERO-PRO and MolmoSpaces show that play-learned skills improve held-out downstream tasks over no-play and random-play baselines, with 20.6 and 17.0 percentage-point gains over CaP-Agent0 on LIBERO-PRO and MolmoSpaces, respectively. Moreover, the learned skills can be plugged into other inference-time Code-as-Policy agents by simply retrieving them into the context, improving RoboSuite and real-world transfer by 8.9 and 8.8 points, respectively, without finetuning the underlying model.",
+    "year": "2026",
+    "doi": ""
+  },
+  "2606.16458": {
+    "title": "RHO: Your Coding Agent is Secretly a Roboticist",
+    "authors": [
+      "Karim Elmaaroufi",
+      "Justin Svegliato",
+      "Sarunas Kalade",
+      "Graham Schelle",
+      "Sanjit A. Seshia",
+      "Matei Zaharia"
+    ],
+    "abstract": "Code-as-Policies (CaP) has shown that large language models (LLMs) can write code to solve robotics tasks by composing perception, planning, and control primitives. Recent CaP systems, however, rely on multi-turn code-generation loops at test time, which is often infeasible for real-time robot control. We introduce Robotics Harness Optimization (RHO), a novel paradigm in which tool-enabled coding agents, at training time, propose and search for interpretable, neurosymbolic multi-file policy repositories (Repositories-as-Policies) that compose these primitives rather than a single prompt, function, or file. RHO searches with reflective feedback from environment reward and execution rather than teleoperation demonstrations. It generalizes to perturbed pick-and-place settings like LIBERO-PRO, where OpenVLA scores 0.0% and $π_{0.5}$ averages 12.83%. Using the same low-level primitives, RHO reaches a 45.0% success rate, 2.5x higher than the strongest multi-turn agentic system, and 3.5x higher than $π_{0.5}$. On Robosuite, RHO sets a new state-of-the-art of 70.0%, exceeding the prior multi-turn record of 68.29% using single-turn execution with no corrective LLM code edits at deployment. When an LLM is used in the control loop, as on RAI's O3DE benchmark, RHO optimizes the deployed agent's multi-file harness of prompts, tools, and control code, improving held-out success from 23.5% to 44.3% with 20% less wall-clock time and 27% fewer tool calls.",
+    "year": "2026",
+    "doi": ""
+  },
+  "2603.11558": {
+    "title": "RoboClaw: An Agentic Framework for Scalable Long-Horizon Robotic Tasks",
+    "authors": [
+      "Ruiying Li",
+      "Yunlang Zhou",
+      "YuYao Zhu",
+      "Kylin Chen",
+      "Jingyuan Wang",
+      "Sukai Wang",
+      "Kongtao Hu",
+      "Minhui Yu",
+      "Bowen Jiang",
+      "Zhan Su",
+      "Jiayao Ma",
+      "Xin He",
+      "Yongjian Shen",
+      "Yang Yang",
+      "Guanghui Ren",
+      "Maoqing Yao",
+      "Wenhao Wang",
+      "Yao Mu"
+    ],
+    "abstract": "Vision-Language-Action (VLA) systems have shown strong potential for language-driven robotic manipulation. However, scaling them to long-horizon tasks remains challenging. Existing pipelines typically separate data collection, policy learning, and deployment, resulting in heavy reliance on manual environment resets and brittle multi-policy execution. We present RoboClaw, an agentic robotics framework that unifies data collection, policy learning, and task execution under a single VLM-driven controller. At the policy level, RoboClaw introduces Entangled Action Pairs (EAP), which couple forward manipulation behaviors with inverse recovery actions to form self-resetting loops for autonomous data collection. This mechanism enables continuous on-policy data acquisition and iterative policy refinement with minimal human intervention. During deployment, the same agent performs high-level reasoning and dynamically orchestrates learned policy primitives to accomplish long-horizon tasks. By maintaining consistent contextual semantics across collection and execution, RoboClaw reduces mismatch between the two phases and improves multi-policy robustness. Experiments in real-world manipulation tasks demonstrate improved stability and scalability compared to conventional open-loop pipelines, while significantly reducing human effort throughout the robot lifecycle, achieving a 25% improvement in success rate over baseline methods on long-horizon tasks and reducing human time investment by 53.7%.",
+    "year": "2026",
+    "doi": ""
+  }
+}
